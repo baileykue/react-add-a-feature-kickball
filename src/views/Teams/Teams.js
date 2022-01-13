@@ -50,6 +50,11 @@ function Teams({ user }) {
 
                   {user && (
                     <td>
+                      <Link to={`/teams/${team.id}`}>
+                        <button type="button" className="btn-view">
+                          View
+                        </button>
+                      </Link>
                       <Link to={`/teams/${team.id}/edit`}>
                         <button type="button" className="btn-edit">
                           Edit
@@ -62,11 +67,6 @@ function Teams({ user }) {
                       >
                         Delete
                       </button>
-                      <Link to={`/teams/${team.id}`}>
-                        <button type="button" className="btn-view">
-                          View
-                        </button>
-                      </Link>
                     </td>
                   )}
                   {!user && (
